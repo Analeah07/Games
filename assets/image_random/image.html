@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Random</title>
+    <link rel="stylesheet" href="image.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top container-fluid">
+        <div class="container-fluid fw-bold">
+        <a class="navbar-brand" href="" id="brand">
+            <img src="assets/index/img/2.png" alt="Logo" class="d-inline-block align-text-top rounded-3"/>
+            Game-Space
+        </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" id="menu-btn">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- offcanvas -->
+          <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <img src="assets/index/img/2.png" alt="logo" id="menu-logo" class="d-inline-block align-text-top rounded-3" style="height: 40px;">
+                <h5 class="offcanvas-title text-black" id="offcanvasNavbarLabel"> Game-Space</h5>
+                <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><span class="bi bi-x-lg text-black"></span></button>
+            </div>
+
+            <div class="offcanvas-body" >
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 justify-content-lg-center">
+                <li class="nav-item">
+                  <a class="nav-link active text-black fw-bold" aria-current="page" href="tree_detector.html">RGB Detector</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-black fw-bold" aria-current="page" href="Color_game.html">Color Game</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-black fw-bold" aria-current="page" href="image.html">Random Cartoon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-black fw-bold" aria-current="page" href="tic_tac_toe.html">Tic-Tac-Toe</a>
+                </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+    </nav><br><br><br>
+
+    <center><div id="container">
+    <div id="inner_container">
+        <img id="img_disney">
+    </div><br>
+    <select id="category" class="cat" onchange="choose_category();">
+        <option value="">Choose a Character</option>
+        <option value="Mickey">Mickey Mouse</option>
+        <option value="Minnie">Minnie Mouse</option>
+        <option value="Red_Chick">Little Red Chick</option>
+        <option value="Goofy">Goofy</option>
+        <option value="Pluto">Pluto</option>
+        <option value="Ludwig">Ludwig Von Drake</option>
+        <option value="Clarabelle">Clarabelle Cow</option>
+        <option value="Daisy">Daisy Duck</option>
+        <option value="Donald">Donald Duck</option>
+        <option value="Pete">Pete</option>
+        <option value="Toodles">Toodles</option>
+      </select><br><br>
+   
+        <button class="btn_tree" onclick="start();" >Start</button>
+        <button class="btn_tree" onclick="stop();">Stop</button>
+    </center>
+   </div><br><br>
+    
+
+           <!-- footer -->
+           <div class="container-fluid footer" id="footer">
+            <div class="row" id="footer-grid">
+                <div class="col-3 text-black" id="first-grid">
+                    <img src="assets/index/img/2.png" alt="Logo" width="90" height="90" class="rounded-4">
+                    <h5>Game-Space</h5>
+                </div>
+                <div class="col-3 text-black p-5" id="second-grid">
+                    <h5><b>Games</b></h5>
+                    <li><a href="#" class=" text-black text-decoration-none">RGB Detector</a></li>
+                    <li><a href="#" class=" text-black text-decoration-none">Color Game</a></li>
+                    <li><a href="#" class=" text-black text-decoration-none">RPS</a></li>
+                    <li><a href="#" class=" text-black text-decoration-none">Tic-Tac-Toe</a></li>
+                </div>
+                <div class="col-3 text-black p-5" id="third-grid">
+                    <h5><b>Suggestions</b></h5>
+                    <li><a href="#" target="_blank" class=" text-black text-decoration-none">Snake</a></li>
+                    <li><a href="#" target="_blank" class=" text-black text-decoration-none">Color Match</a></li>
+                    <li><a href="#" target="_blank" class=" text-black text-decoration-none">Puzzle</a></li>
+                    <li><a href="#" target="_blank" class=" text-black text-decoration-none">Others</a></li>
+                </div>
+                <div class="col-3 text-black" id="fourth-grid"> 
+                    <h5><b>Contact</b></h5>
+                    <a href="#" class="text-black"><span class="bi bi-facebook "></span></a>
+                    <a href="#" class="text-black"><span class="bi bi-messenger "></span></a>
+                    <a href="#" class="text-black"><span class="bi bi-linkedin "></span></a>
+                </div>
+                <div class="col text-black" id="fifth-grid">
+                    <p><span>&#169;</span> Analeah_Dogeno</p>
+                    
+                </div>
+            </div>
+         </div>    
+        
+<script src="image.js"></script>
+</body>
+</html>
